@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7">
+
+<![endif]-->
+
+<!--[if (IE 7)&!(IEMobile)]>
+
+<html lang="en" class="no-js lt-ie9 lt-ie8">
+
+<![endif]-->
+
+<!--[if (IE 8)&!(IEMobile)]>
+
+<html lang="en" class="no-js lt-ie9">
+
+<![endif]-->
+
+<!--[if gt IE 8]><!-->
+
+<html lang="en" class="no-js">
+
+<!--<![endif]-->
+
+<html>
+<head>
+    <title>MesosCon OS Survey</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="//mesosphere.github.io/cnvs/styles/styles.css">
+</head>
+
+<body>
+<div class="pod">
+    <div class="row">
+        <div class="column-12" id="content">
+            <h1>MesosCon OS Survey</h1>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+var container = document.getElementById("content");
+var data = REPLACE_DATA;
+
+for (let browser of data) {
+    var h3 = document.createElement("h3");
+    var txt = document.createTextNode(browser.OS + ": " + browser.Count);
+    h3.appendChild(txt);
+    container.appendChild(h3);
+}
+</script>
+</html>
