@@ -16,7 +16,7 @@ CREATE TABLE browsers.browser_counts (
 Run the server
 
 Usage:
-  browsers-demo-app serve [flags]
+  osdetector-demo serve [flags]
 
 Flags:
       --address string               The address to run the HTTP server on (default ":8080")
@@ -26,5 +26,5 @@ Flags:
       --template string              The filename of the template (default "index.html")
 
 Global Flags:
-      --config string   config file (default is $HOME/.browsers-demo-app.yaml)
+      --config string   config file (default is $HOME/.osdetector-demo.yaml)
 ```

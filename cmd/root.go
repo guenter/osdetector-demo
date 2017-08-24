@@ -27,7 +27,7 @@ var cfgFile string
 
 // RootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
-	Use:   "browsers-demo-app",
+	Use:   "osdetector-demo",
 	Short: "A brief description of your application",
 	Long: `A longer description that spans multiple lines and likely contains
 examples and usage of using your application. For example:
@@ -55,7 +55,7 @@ func init() {
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
-	RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.browsers-demo-app.yaml)")
+	RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.osdetector-demo.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
@@ -75,9 +75,9 @@ func initConfig() {
 			os.Exit(1)
 		}
 
-		// Search config in home directory with name ".browsers-demo-app" (without extension).
+		// Search config in home directory with name ".osdetector-demo" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".browsers-demo-app")
+		viper.SetConfigName(".osdetector-demo")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
